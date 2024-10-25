@@ -1,0 +1,29 @@
+##
+# Copyright (c) 2021, Konstantin Aladyshev <aladyshev22@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+##
+
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = SimpleApp
+  FILE_GUID                      = 466eed70-8def-44ea-9fb4-9012b266ec8c
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  SimpleApp.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  UefiRuntimeServicesTableLib
+  
+[Protocols]
+  gEfiHash2ServiceBindingProtocolGuid
+  gEfiHash2ProtocolGuid
+  gEfiLoadedImageProtocolGuid
